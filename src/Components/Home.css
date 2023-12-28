@@ -1,0 +1,22 @@
+.mask {
+  mask-image: url("../Assets/mask-banner.png");
+  /* -webkit-mask-size: 50%; */
+  mask-size: 75%;
+  mask-position: cover;
+  mask-repeat: no-repeat;
+  margin-top: 30px;
+  margin-left: 110px;
+  padding-right: 70px;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 70%;
+}
+
+.section2 {
+  background-image: url("https://www.ombrulla.com/images/home/position-statement.svg");
+}
+
