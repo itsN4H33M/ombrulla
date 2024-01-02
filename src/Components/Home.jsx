@@ -4,8 +4,14 @@ import './Home.css'
 import pic from '../Assets/ai-visual-inspection.webp'
 import SmallHeading from './SmallHeading'
 import SmallHeading2 from './SmallHeading2'
+import Carousel from './Carousel'
+import CustomerCarousel from './CustomerCarousel'
+
 
 function Home() {
+
+    const carouselImages = ["https://www.ombrulla.com/best-western.webp", "https://www.ombrulla.com/dubai-festival-city.webp", "https://www.ombrulla.com/wild-leaf.webp", "https://www.ombrulla.com/emirates.webp", "https://www.ombrulla.com/burger-king.webp", "https://www.ombrulla.com/damac.webp", "https://www.ombrulla.com/planet-fitness.webp", "https://www.ombrulla.com/suja.webp", "https://www.ombrulla.com/azelit.webp"]
+
 
     return (
         <>
@@ -179,10 +185,106 @@ function Home() {
                 </div>
             </div>
             {/* Section 8 */}
-            <div className='flex items-center justify-center flex-col mb-16'>
-                <SmallHeading2 value={'OUR CUSTOMERS'} />
-                <h1 className='text-5xl'>They Trust Us</h1>
-
+            <div className='mb-40'>
+                <div className='flex items-center justify-center flex-col mb-16'>
+                    <SmallHeading2 value={'OUR CUSTOMERS'} />
+                    <h1 className='text-5xl'>They Trust Us</h1>
+                </div>
+                <div>
+                    <Carousel images={carouselImages} />
+                </div>
+            </div>
+            {/* Section 9 */}
+            <div className='h-screen'>
+                <div className='h-[92%] bg-blue-950'>
+                    <div className='w-[87%] h-full flex justify-center items-start flex-col mx-auto text-left'>
+                        <SmallHeading value={'OUR TESTIMONIALS'} add={'text-white'} />
+                        <h1 className='text-4xl text-white'>What Customers Say About Us</h1>
+                        <CustomerCarousel />
+                    </div>
+                </div>
+            </div>
+            {/* Section 10 */}
+            <div className='h-screen flex flex-col justify-center items-center'>
+                <SmallHeading2 value={'BRANDS WE WORK WITH'} />
+                <h1 className='text-5xl mb-10'>Trusted by Thousands of Businesses </h1>
+                <div className='grid grid-cols-3 w-4/5 gap-0.5'>
+                    <div className='bg-slate-50 px-8 py-8 flex justify-center'>
+                        <img className='h-32 w-32' src="https://www.ombrulla.com/_astro/unv.85d8fa6f_1oWCsP.webp" alt="" />
+                    </div>
+                    <div className='bg-slate-50 px-8 py-8 flex justify-center'>
+                        <img className='h-32 w-32' src="https://www.ombrulla.com/_astro/dahua.d9dec1a0_1788pM.webp" alt="" />
+                    </div>
+                    <div className='bg-slate-50 px-8 py-8 flex justify-center'>
+                        <img className='h-32 w-32' src="https://www.ombrulla.com/_astro/nvidia.8ba96db4_Z1BLchq.webp" alt="" />
+                    </div>
+                    <div className='bg-slate-50 px-8 py-8 flex justify-center'>
+                        <img className='h-32 w-32' src="https://www.ombrulla.com/_astro/amazon.8aa611f6_Zkubpr.webp" alt="" />
+                    </div>
+                    <div className='bg-slate-50 px-8 py-8 flex justify-center'>
+                        <img className='h-32 w-32' src="https://www.ombrulla.com/_astro/hikvision.2a55c6c2_Z1UqjJV.webp" alt="" />
+                    </div>
+                    <div className='bg-slate-50 px-8 py-8 flex justify-center'>
+                        <img className='h-24 w-24' src="https://www.ombrulla.com/_astro/azure.3a96288f_ZDjkY6.webp" alt="" />
+                    </div>
+                </div>
+            </div>
+            {/* Section 11 */}
+            <div className='h-screen mb-20'>
+                <div className='w-10/12 flex flex-col justify-center items-center  mx-auto'>
+                    <SmallHeading2 value={'BLOG UPDATES'} />
+                    <h1 className='text-5xl'>To Read</h1>
+                    <div className='w-full border-t-2 grid grid-cols-3 px-2 mt-10 gap-20 h-112'>
+                        <div className='relative mt-16'>
+                            <img className='rounded-lg h-52' src="https://blog.ombrulla.com/wp-content/uploads/2023/12/AI-in-Logisics-and-Supply-chain.webp" alt="" />
+                            <Link to={''}>
+                                <h1 className='text-lg font-medium pt-8'>AI Revolutionizes Logistics and Supply Chain Management</h1>
+                                <p className='text-slate-500 pt-4'>AI takes huge leaps in areas like Logistics and Supply chain management with AI Visual Inspection, AI Data Analytics, Predictive Maintenance etc.</p>
+                            </Link>
+                            <div className='flex justify-start items-center absolute bottom-0'>
+                                <Link to={''}>
+                                    <img className='rounded-full h-10 w-10' src="https://secure.gravatar.com/avatar/1ed886cb123f0f55aba0afe6ecc7f56c?s=96&d=mm&r=g" alt="" />
+                                </Link>
+                                <div className='ml-3 self-end'>
+                                    <Link className='font-light' to={''}>Zara Elizabeth</Link>
+                                    <p className='font-light text-slate-500 text-sm'>December 21, 2023 · 4 min read</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='relative mt-16'>
+                            <img className='rounded-lg h-52' src="https://blog.ombrulla.com/wp-content/uploads/2023/12/Google-io-2023.webp" alt="" />
+                            <Link to={''}>
+                                <h1 className='text-lg font-medium pt-8'>Google I/O 2023: A Deeper Look at the Future of AI</h1>
+                                <p className='text-slate-500 pt-4'>Google I/O 2023 envisions a future where helpful AI integrates seamlessly into our lives, breaking down barriers, empowering individuals, and tackling global challenges. By developing AI responsibly, we can shape a future where everyone benefits.</p>
+                            </Link>
+                            <div className='flex justify-start items-center absolute bottom-0'>
+                                <Link to={''}>
+                                    <img className='rounded-full h-10 w-10' src="https://secure.gravatar.com/avatar/1ed886cb123f0f55aba0afe6ecc7f56c?s=96&d=mm&r=g" alt="" />
+                                </Link>
+                                <div className='ml-3 self-end'>
+                                    <Link className='font-light' to={''}>Zara Elizabeth</Link>
+                                    <p className='font-light text-slate-500 text-sm'>December 8, 2023 · 5 min read</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='relative mt-16'>
+                            <img className='rounded-lg h-52' src="https://blog.ombrulla.com/wp-content/uploads/2023/11/Blog-Images.png" alt="" />
+                            <Link to={''}>
+                                <h1 className='text-lg font-medium pt-8'>A Deep Understanding of AI Visual Inspection</h1>
+                                <p className='text-slate-500 pt-4'>The primary objective of this blog is to offer a foundational comprehension of automated visual evaluation and elucidate how AI Visual Inspection techniques contributes to significant time and effort savings.</p>
+                            </Link>
+                            <div className='flex justify-start items-center absolute bottom-0'>
+                                <Link to={''}>
+                                    <img className='rounded-full h-10 w-10' src="https://secure.gravatar.com/avatar/1ed886cb123f0f55aba0afe6ecc7f56c?s=96&d=mm&r=g" alt="" />
+                                </Link>
+                                <div className='ml-3 self-end'>
+                                    <Link className='font-light' to={''}>Zara Elizabeth</Link>
+                                    <p className='font-light text-slate-500 text-sm'>November 28, 2023 · 5 min read</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )

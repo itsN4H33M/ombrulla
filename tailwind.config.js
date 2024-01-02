@@ -9,6 +9,15 @@ module.exports = {
       square: "square",
       roman: "upper-roman",
     },
+
+    extend: {
+      height: {
+        100: "30rem",
+        104: "31rem",
+        108: "32rem",
+        112: "34rem" 
+      },
+    },
   },
   plugins: [],
 };
